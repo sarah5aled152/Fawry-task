@@ -1,3 +1,19 @@
+/**
+ * Entry point for the project.
+ *
+ * Demonstrates the following features:
+ * - Creation of various product types (perishable, shippable, non-shippable)
+ * - Creation of customers with different balances
+ * - Running checkout scenarios, including:
+ *    - Successful checkout
+ *    - Empty cart checkout
+ *    - Insufficient customer balance
+ *    - Insufficient product stock
+ *    - Edge cases (multiple additions of same product)
+ * - Usage of utility type guards (isPerishable, isShippable)
+ * - Output of transaction results and error handling
+ */
+
 import { ShoppingCart } from './cart/shopping-cart.js';
 import { Customer } from './customers/customer.js';
 import { NonPerishableNonShippableProduct } from './products/NonPerishable-NonShippable.js';
@@ -146,6 +162,11 @@ function runCompleteDemo(): void {
     .find((item) => item.product === cheese);
   console.log(`Total cheese quantity in cart: ${cheeseItem?.quantity}`);
 }
+
+/** 
+ * Calls the runCompleteDemo function, which executes all test cases and scenarios.
+ * Catches and logs any unexpected errors that occur during the demo run.
+ */
 function main(): void {
   try {
     runCompleteDemo();
