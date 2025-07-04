@@ -4,6 +4,20 @@ import { CheckoutResult } from '../interfaces/index.js';
 import { ShippingService } from './shipping.js';
 
 export class CheckoutService {
+  /**
+   * Processes the checkout for a given customer and shopping cart.
+   * - Validates the cart.
+   * - Calculates subtotal and shipping fees.
+   * - Checks if the customer can afford the total amount.
+   * - Deducts the total from the customer's balance if possible.
+   * - Updates product quantities.
+   * - Prints a receipt.
+   * - Returns a CheckoutResult object indicating success or failure.
+   *
+   * @param customer - The customer performing the checkout
+   * @param cart - The shopping cart to checkout
+   * @returns CheckoutResult with transaction details and status
+   */
   static processCheckout(
     customer: Customer,
     cart: ShoppingCart
@@ -65,6 +79,16 @@ export class CheckoutService {
     }
   }
 
+  /**
+   * Logs a formatted receipt to the console.
+   * - Lists each item, subtotal, shipping, total amount, and remaining balance.
+   *
+   * @param cart - The shopping cart being checked out
+   * @param subtotal - The subtotal of the cart
+   * @param shippingFees - The calculated shipping fees
+   * @param totalAmount - The total amount paid
+   * @param customerBalance - The customer's balance after payment
+   */
   private static printReceipt(
     cart: ShoppingCart,
     subtotal: number,
