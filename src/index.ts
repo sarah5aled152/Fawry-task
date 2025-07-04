@@ -1,8 +1,8 @@
 import { ShoppingCart } from './cart/shopping-cart.js';
 import { Customer } from './customers/customer.js';
-import { NonPerishableNonShippableProduct } from './products/NonPerishableNonShippableProduct.js';
-import { NonPerishableShippableProduct } from './products/NonPerishableShippableProduct.js';
-import { PerishableShippableProduct } from './products/PerishableShippableProduct.js';
+import { NonPerishableNonShippableProduct } from './products/NonPerishable-NonShippable.js';
+import { NonPerishableShippableProduct } from './products/NonPerishable-Shippable.js';
+import { PerishableShippableProduct } from './products/Perishable-Shippable.js';
 import { checkout } from './utils/checkout.js';
 import { isPerishable } from './utils/isPerishable.js';
 import { isShippable } from './utils/isShippable.js';

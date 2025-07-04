@@ -1,7 +1,7 @@
 import { ShoppingCart } from '../cart/shopping-cart.js';
 import { Customer } from '../customers/customer.js';
-import { CheckoutResult } from '../interfaces';
-import { ShippingService } from './shipping.service.js';
+import { CheckoutResult } from '../interfaces/index.js';
+import { ShippingService } from './shipping.js';
 
 export class CheckoutService {
   static processCheckout(
